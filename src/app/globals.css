@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-una-olive-950: #0f1508;
+  --color-una-olive-900: #1a230f;
+  --color-una-olive-800: #253314;
+  --color-una-olive-700: #2d3c15;
+  --color-una-olive-600: #3a441f;
+  --color-una-olive-500: #4f5d2b;
+  --color-una-olive-400: #6c7f3c;
+  --color-una-olive-100: #edf3de;
+  --color-una-olive-50: #f5f8ed;
+
+  --color-una-cream-50: #faf8f4;
+  --color-una-cream-100: #f5f1e7;
+  --color-una-cream-200: #ede6d5;
+  --color-una-cream-300: #e2d7be;
+
+  --color-una-sand-300: #d8ceab;
+  --color-una-sand-400: #c8bd94;
+  --color-una-sand-500: #b5a779;
+
+  --color-una-warm-300: #e5c8a6;
+  --color-una-earth-500: #8b7258;
+  --color-una-earth-700: #574635;
+
+  --color-una-dark-950: #121412;
+  --color-una-dark-900: #1a1c1a;
+  --color-una-dark-800: #262a25;
+
+  --font-serif: var(--font-cormorant), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --bg-primary: #faf8f4;
+  --text-primary: #1a1c1a;
+  --text-muted: #5e6459;
+  --brand-olive: #2d3c15;
+  --brand-cream: #f5f1e7;
+  --brand-sand: #d8ceab;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle organic grain texture */
+.bg-grain {
+  background-image: radial-gradient(rgba(45, 60, 21, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-grain-dark {
+  background-image: radial-gradient(rgba(216, 206, 171, 0.07) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f1e7;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8bd94;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3c15;
+}
+
+/* Custom animations */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+}
+
+.animate-breathe {
+  animation: breathe 8s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
