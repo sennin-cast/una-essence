@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://unaessence.com.br/sitemap.xml
